@@ -32,6 +32,11 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/about', 'Home::about');
 $routes->get('/contact', 'Home::contact');
+$routes->get('/productList', 'product::productList');
+$routes->get('/product/(:num)', 'product::product/$1');
+$routes->get('/signup_login', 'user::signup_login');
+
+
 
 
 

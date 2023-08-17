@@ -1,0 +1,9 @@
+CRITICAL - 2023-08-14 09:40:49 --> syntax error, unexpected token "foreach", expecting "," or ";"
+in APPPATH\Views\productlist.php on line 32.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('productlist', [], true)
+ 3 APPPATH\Controllers\product.php(19): view('productlist', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\product->productList()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\product))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
