@@ -34,7 +34,15 @@ $routes->get('/about', 'Home::about');
 $routes->get('/contact', 'Home::contact');
 $routes->get('/productList', 'product::productList');
 $routes->get('/product/(:num)', 'product::product/$1');
+
 $routes->get('/signup_login', 'user::signup_login');
+$routes->post('/signup_submit', 'user::signup_submit');
+$routes->post('/login_submit', 'user::login_submit');
+$routes->get('/signup_thanks', 'user::signup_thanks');
+$routes->get('/logout', 'user::logout');
+
+
+
 
 
 
