@@ -22,20 +22,32 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="<?= base_url('/') ?>">Welcome </a>
-            <?php
-                if($is_login) {
-                ?>
+            <a class="navbar-brand" href="<?= base_url('/') ?>">Welcome <?php
+            if($is_login) {
+                echo  '<div class="user-info">';
+                echo '<h4 class="user-name"><span style="color:blanchedalmond">'.$name.'</span></h4>
+                  </div>';
+
+                  if($level == -1){
+                    echo '<a class="navbar-brand" href="'.base_url('dashboard').'"> <i class="icon-unlock"></i>Admin Portal</a>';
+                  echo'<a class="navbar-brand" href="'.base_url('logout').'">Logout<a/>';
+    
+               }elseif($level == 0){
+                   echo'<a class="navbar-brand" href="'.base_url('logout').'">Logout<a/>';
+    
+               }
+            }
+            else{
+               echo'<a class="navbar-brand" href="'.base_url('signup_login').'">Sign Up / LOGIN<a/>';
+
+           } ?></a>
                 
-                  
-                  <div class="user-info">
-                    <h3 class="user-name"><span style="color:blanchedalmond"><?=$name?></span></h3>
-                  </div>
         
                 
-                <?php
-                }
-                ?>
+
+                
+        
+            
 
                
         
@@ -49,7 +61,7 @@
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?= base_url('about') ?>">About</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?= base_url('productList') ?>">Product</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?= base_url('contact') ?>">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?= base_url('signup_login') ?>">Sign up/Login</a></li>
+                    
 
                 </ul>
             </div>

@@ -110,7 +110,7 @@ class user extends BaseController
 
         $session =\Config\Services::session();
         $session->set([
-            'name' => $userdata['firstname'].$userdata['lastname'],
+            'name' => $userdata['firstname']." ".$userdata['lastname'],
             'token' => $token,
             'level' =>$userdata['level']
 
