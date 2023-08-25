@@ -17,7 +17,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public string $baseURL = 'http://170-187-198-174.ip.linodeusercontent.com';
+    public string $baseURL = BASE_URL;
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

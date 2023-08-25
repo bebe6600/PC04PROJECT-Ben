@@ -78,6 +78,29 @@ defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8);       // database 
 defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9);      // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125);    // highest automatically-assigned error code
 
+$baseurl = '';
+$protocol = "http://";
+if(isset($_SERVER['SERVER_PORT'])){
+    switch ($_SERVER['SERVER_PORT']) {
+        case '443':
+            $protocol = "https://";
+            break;
+        
+        default:
+            $protocol = "http://";
+            break;
+    }
+}
+
+if(isset($_SERVER['HTTP_HOST'])){
+    $baseurl = $protocol.$_SERVER['HTTP_HOST']."/";
+}else{
+    $baseurl = $protocol."mylanding.local/";
+}
+
+defined('BASE_URL')  || define('BASE_URL', $baseurl); //
+
+
 /**
  * @deprecated Use \CodeIgniter\Events\Events::PRIORITY_LOW instead.
  */
