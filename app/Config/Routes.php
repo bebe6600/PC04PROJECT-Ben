@@ -42,6 +42,16 @@ $routes->get('/signup_thanks', 'user::signup_thanks');
 $routes->get('/logout', 'user::logout');
 
 
+$routes->get('/dashboard', 'Backend::index');
+$routes->get('/product_manage', 'Backend::product_manage');
+$routes->get('/product_add', 'Backend::product_add');
+$routes->get('/product_edit/(:num)', 'Backend::product_add/$1');
+$routes->get('/product_del/(:num)', 'Backend::product_del/$1');
+$routes->post('/product_submit', 'Backend::product_submit');
+
+
+
+
 
 
 
