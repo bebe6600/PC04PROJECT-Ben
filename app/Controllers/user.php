@@ -44,7 +44,7 @@ class user extends BaseController
 
     public function signup_login(){
 
-        return view('header',$this->data).view('signup_login').view('footer');
+        return view('header',$this->data).view('signup_login').view('footer',$this->data);
     }
 
     public function signup_submit(){
@@ -129,7 +129,7 @@ class user extends BaseController
     public function signup_thanks(){
 
 
-        return view('header',$this->data).view('signup_thanks').view('footer');
+        return view('header',$this->data).view('signup_thanks').view('footer',$this->data);
 
 
     }

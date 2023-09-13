@@ -95,19 +95,19 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="<?=base_url("product_manage")?>">
                 <svg class="bi"><use xlink:href="#file-earmark"/></svg>
                 Product Manage
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="<?=base_url("user_manage")?>">
                 <svg class="bi"><use xlink:href="#cart"/></svg>
                 User Manage
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="<?=base_url("order_manage")?>">
                 <svg class="bi"><use xlink:href="#people"/></svg>
                 Order Manage
               </a>
@@ -150,12 +150,12 @@
           <hr class="my-3">
 
           <ul class="nav flex-column mb-auto">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
                 <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
                 Settings
               </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="<?=base_url('logout')?>">
                 <svg class="bi"><use xlink:href="#door-closed"/></svg>
@@ -180,6 +180,7 @@
             This week
           </button>
         </div> -->
+        <div><a class="btn btn-primary" href="<?=base_url('product_add')?>">Add Product</a></div>
       </div>
 
       

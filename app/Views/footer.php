@@ -55,6 +55,74 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Core theme JS-->
   <script src="<?= base_url('assets/') ?>js/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+
+  <script>
+
+var token = '<?= isset($token) ? $token : '' ?>';
+
+
+function addCart(product_id, qty) {
+
+  if (token == '') {
+    alert("Please login first");
+  } else {
+
+    //endpoint
+    $.post("<?=base_url('api/addCart')?>", {
+      "product_id": product_id,
+      "qty": qty,
+      "token": token
+    }, function(res) {
+
+      if (res == "OK") {
+        getCart();
+      } else {
+        alert(res);
+      }
+
+    });
+
+  }
+
+}
+
+
+function getCart() {
+
+  $("#cartList").html("");
+  $(".subtotal").html("$0");
+
+  if (token != '') {
+
+    $.getJSON("<?= base_url('api/getCart') ?>/" + token, function(res) {
+      // success then render view
+
+      $("#cartList").html("");
+      var total_amount = 0;
+      for (var i = 0; i < res.length; i++) {
+
+        var html = $("<div>").html(`<div class="dropdown-product-item"><span class="dropdown-product-remove"><i class="icon-cross"></i></span><a class="dropdown-product-thumb" href="#"><img src="${res[i].image_url}" 
+                  alt="Product"></a>
+                    <div class="dropdown-product-info"><a class="dropdown-product-title" href="#">${res[i].title}</a><span class="dropdown-product-details">${res[i].qty} x $${res[i].price}</span></div>
+                  </div>`);
+        $("#cartList").append(html);
+
+        total_amount += res[i].qty * res[i].price;
+
+      }
+
+      $(".subtotal").html("$" + total_amount.toFixed(2));
+
+    });
+
+  }
+
+}
+
+getCart();
+  </script>
   </body>
 
   </html>

@@ -42,6 +42,7 @@
                     <div class="product-price" style="color:red">
                         $<?= $v['price'] ?>
                     </div>
+                    <div ><button onclick="addCart(<?=$v['product_id']?>,1)" class="btn btn-success">add to cart</button></div>
                 </div>
             </div>
        

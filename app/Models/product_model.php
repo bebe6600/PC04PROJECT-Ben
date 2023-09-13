@@ -13,7 +13,7 @@ class product_model extends Model {
         "image_url",
         "price",
         "short_desc",
-        "teste",
+        "Taste",
         "Ingredients",
         "Weight",
         "sku",

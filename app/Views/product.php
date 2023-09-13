@@ -45,12 +45,11 @@
             <div class="pt-1 mb-2"><span class="text-medium">SKU:</span> #<?= $single_p['sku'] ?></div>
             <hr class="mb-3">
             <div class="d-flex flex-wrap justify-content-between">
-                <div class="entry-share mt-2 mb-2"><span class="text-muted">Share:</span>
-                    <div class="share-links"><a class="social-button shape-circle sb-facebook" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="socicon-facebook"></i></a><a class="social-button shape-circle sb-twitter" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="socicon-twitter"></i></a><a class="social-button shape-circle sb-instagram" href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="socicon-instagram"></i></a><a class="social-button shape-circle sb-google-plus" href="#" data-toggle="tooltip" data-placement="top" title="Google +"><i class="socicon-googleplus"></i></a></div>
-                </div>
                 <div class="sp-buttons mt-2 mb-2">
-                    <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button>
-                    <button class="btn btn-primary" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="icon-bag"></i> Add to Cart</button>
+                    <!-- <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist"><i class="icon-heart"></i></button> -->
+                    <div ><button onclick="addCart(<?=$single_p['product_id']?>,1)" class="btn btn-success">add to cart</button></div>
+
+                    
                 </div>
             </div>
         </div>

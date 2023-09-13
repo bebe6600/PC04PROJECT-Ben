@@ -15,6 +15,7 @@
     <link href="<?= base_url('assets/') ?>https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="<?= base_url('assets/') ?>css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 </head>
 
@@ -61,6 +62,9 @@
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?= base_url('about') ?>">About</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?= base_url('productList') ?>">Product</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?= base_url('contact') ?>">Contact</a></li>
+                    <li class="nav-item "><a class="btn btn-success" href="<?= base_url('cart') ?>"><i class="bi bi-cart "></i></a></li>
+
+                    
                     
 
                 </ul>

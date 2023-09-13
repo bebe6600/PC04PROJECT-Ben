@@ -34,6 +34,20 @@ $routes->get('/about', 'Home::about');
 $routes->get('/contact', 'Home::contact');
 $routes->get('/productList', 'product::productList');
 $routes->get('/product/(:num)', 'product::product/$1');
+$routes->get('/cart','product::cart');
+
+
+$routes->get('/checkout_address', 'checkout::checkout_address');
+
+$routes->post('/checkout_submit', 'checkout::checkout_submit');
+
+// $routes->get('/checkout_shipping', 'Frontend::checkout_shipping');
+// $routes->get('/checkout_payment', 'Frontend::checkout_payment');
+// $routes->get('/checkout_review', 'Frontend::checkout_review');
+$routes->get('/checkout_complete', 'checkout::checkout_complete');
+
+$routes->post('/api/addCart', 'Api::addCart');
+$routes->get('/api/getCart/(:any)', 'Api::getCart/$1');
 
 $routes->get('/signup_login', 'user::signup_login');
 $routes->post('/signup_submit', 'user::signup_submit');
@@ -45,12 +59,29 @@ $routes->get('/logout', 'user::logout');
 $routes->get('/dashboard', 'Backend::index');
 $routes->get('/product_manage', 'Backend::product_manage');
 $routes->get('/product_add', 'Backend::product_add');
-$routes->get('/product_edit/(:num)', 'Backend::product_add/$1');
+$routes->post('/product_insert', 'Backend::product_insert');
+$routes->get('/product_edit/(:num)', 'Backend::product_edit/$1');
 $routes->get('/product_del/(:num)', 'Backend::product_del/$1');
-$routes->post('/product_submit', 'Backend::product_submit');
+$routes->post('/product_update', 'Backend::product_update');
+
+
+//user
+$routes->get('/user_manage', 'Backend::user_manage');
+$routes->get('/user_add', 'Backend::user_add');
+$routes->post('/user_insert', 'Backend::user_insert');
+$routes->get('/user_edit/(:num)', 'Backend::user_edit/$1');
+$routes->get('/user_del/(:num)', 'Backend::user_del/$1');
+$routes->post('/user_update', 'Backend::user_update');
 
 
 
+// so
+$routes->get('/so_manage', 'Backend::so_manage');
+$routes->get('/so_add', 'Backend::so_add');
+$routes->post('/so_insert', 'Backend::so_insert');
+$routes->get('/so_edit/(:num)', 'Backend::so_edit/$1');
+$routes->get('/so_del/(:num)', 'Backend::so_del/$1');
+$routes->post('/so_update', 'Backend::so_update');
 
 
 
