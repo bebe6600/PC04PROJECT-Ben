@@ -210,7 +210,7 @@
               <div class="card mb-4">
 
               </div>
-              <div class="card mb-4"> 
+              <div class="card mb-4">
                 <div class="card-header">
                   <i class="fas fa-table me-1"></i>
                   Order Add
@@ -291,33 +291,33 @@
                       <lable for="Postcode">Postcode</lable>
                       <input name="Postcode" id="Postcode" class="form-control" />
                     </div>
+
+
+
+                    <div>
+                      <lable for="Address1">Address 1</lable>
+                      <input name="Address1" id="Address1" class="form-control" />
+                    </div>
+                    <div>
+                      <lable for="Address2">Address2</lable>
+                      <input name="Address2" id="Address2" class="form-control" />
+                    </div>
+
+
+
+                    <input class="btn btn-primary" type="submit" value="Submit" />
+
+                  </form>
                 </div>
-
-
-                <div>
-                  <lable for="Address1">Address 1</lable>
-                  <input name="Address1" id="Address1" class="form-control" />
-                </div>
-                <div>
-                  <lable for="Address2">Address2</lable>
-                  <input name="Address2" id="Address2" class="form-control" />
-                </div>
-
-
-
-                <input class="btn btn-primary" type="submit" value="Submit" />
-
-                </form>
               </div>
             </div>
+          </main>
+
+
+
+
+        </main>
       </div>
-      </main>
-
-
-
-
-      </main>
-    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
