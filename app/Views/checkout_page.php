@@ -24,9 +24,9 @@
      <table class="table table-bordered">
          <tr>
              <td>Cart Subtotal:</td>
-             <td class="text-medium">$289.68</td>
+             <td class="text-medium"><?=$subtotal?></td>
          </tr>
-         <tr>
+         <!-- <tr>
              <td>Shipping:</td>
              <td class="text-medium">$22.50</td>
          </tr>
@@ -37,7 +37,7 @@
          <tr>
              <td></td>
              <td class="text-lg text-medium">$315.60</td>
-         </tr>
+         </tr> -->
      </table>
      <br/>
      <form method="POST" action="<?= base_url('checkout_submit') ?>">

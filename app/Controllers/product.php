@@ -62,9 +62,9 @@ class product extends user
             $cartList[$k]['title'] = $productData['title'];
             $cartList[$k]['image_url'] = $productData['image_url'];
 
-           $this->data_p['cartList']= $cartList;
+      
         }
-
+        $this->data_p['cartList']= $cartList;
         return view("header", $this->data) . view("cart", $this->data_p) . view("footer", $this->data);
     }
 }

@@ -212,9 +212,14 @@
           <tbody>
             <?php
             foreach($userlist as $v){
+              if($v['level']==-1){
+              $identity= "admin";
+              }else{
+                $identity= "member";
+              }
              echo ' <tr>
              <td>'.$v['user_id'].'</td>
-             <td>'.$v['level'].'</td>
+             <td>'.$identity.'</td>
              <td>'.$v['firstname'].'</td>
              <td>'.$v['lastname'].'</td>
              <td>'.$v['email'].'</td>

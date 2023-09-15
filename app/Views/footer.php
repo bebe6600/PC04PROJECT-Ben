@@ -77,6 +77,7 @@ function addCart(product_id, qty) {
     }, function(res) {
 
       if (res == "OK") {
+        alert('Add successful');
         getCart();
       } else {
         alert(res);

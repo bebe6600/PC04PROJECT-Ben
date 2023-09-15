@@ -14,8 +14,30 @@ class checkout extends user
 {
     public function checkout_address()
     {
+        $usermodel = new user_model();
+        $userdata = $usermodel->where([
+            'token' => $this->data['token'],
+            'is_deleted' => 0,
+        ])->first();
 
-        return view('header', $this->data) . view('checkout_page') . view('footer', $this->data);
+        $cartmodel = new cart_model();
+        $cartlist = $cartmodel->where([
+            'user_id' => $userdata['user_id'],
+            'is_deleted' => 0
+        ])->findAll();
+        
+        $subtotal =0;
+        foreach($cartlist as $k =>$v)
+        {
+            $subtotal += $v['qty'] * $v['price'];
+            
+            
+        }
+        $this->data['subtotal']=$subtotal;
+        // print_r($cartlist);
+        // exit;
+
+        return view('header', $this->data) . view('checkout_page',$this->data) . view('footer', $this->data);
     }
 
 
@@ -75,7 +97,7 @@ class checkout extends user
         $productmodel = new product_model();
 
         foreach ($cartlist as $k => $v) {
-            $total_amout = $v['qty'] * $v['price'];
+            $total_amount = $v['qty'] * $v['price'];
 
             $productdata =  $productmodel->where([
                 'product_id' => $v['product_id'],

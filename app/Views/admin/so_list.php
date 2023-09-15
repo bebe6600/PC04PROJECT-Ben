@@ -251,8 +251,8 @@
              <td>' . $v['shipping_zip'] . '</td>
              <td>' . $v['remarks'] . '</td>
              <td>' . $v['created_date'] . '</td>
-             <td><a class="btn btn-warning mb-1" href="' . base_url('so_edit/' . $v['user_id']) . '">edit</a>
-             <a class="btn btn-danger" href="' . base_url('so_del/' . $v['user_id']) . '">Del</a></td>
+             <td><a class="btn btn-warning mb-1" href="' . base_url('so_edit/' . $v['so_id']) . '">edit</a>
+             <a class="btn btn-danger" href="' . base_url('so_del/' . $v['so_id']) . '">Del</a></td>
              </tr>';
                 }
                 ?>

@@ -372,15 +372,17 @@ class Backend extends BaseController
         return redirect()->to('so_manage');
     }
 
-    public function so_edit($id)
+    public function so_edit($so_id)
     {
 
 
         $so_model = new salesorder_model();
-        $sodata = $so_model->where(['is_deleted' => 0])->find($id);
+        $sodata = $so_model->where(['is_deleted' => 0])->find($so_id);
         $this->data['sodata'] = $sodata;
+        // print_r($sodata);
+        // exit;
 
-        $this->data['id'] = $id;
+        $this->data['so_id'] = $so_id;
 
         return view("admin/so_edit", $this->data);
     }
@@ -421,7 +423,7 @@ class Backend extends BaseController
                 'shipping_zip' => $Postcode,
                 'remarks' => $remarks,
                 'shipping_country' => $country,
-            'modified_date' => date("Y-m-d H:i:s")
+                 'modified_date' => date("Y-m-d H:i:s")
         ]);
 
         return redirect()->to('so_manage');

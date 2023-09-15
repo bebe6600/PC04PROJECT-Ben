@@ -107,13 +107,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="<?=base_url('user_manage')?>">
                 <svg class="bi"><use xlink:href="#cart"/></svg>
                 User Manage
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="<?=base_url('so_manage')?>">
                 <svg class="bi"><use xlink:href="#people"/></svg>
                 Order Manage
               </a>
@@ -190,7 +190,7 @@
 
       
 
-      <h2>Section title</h2>
+      <!-- <h2>Section title</h2>
       <div class="table-responsive small">
         <table class="table table-striped table-sm">
           <thead>
@@ -317,7 +317,7 @@
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> -->
     </main>
   </div>
 </div>
