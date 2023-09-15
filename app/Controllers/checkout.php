@@ -97,7 +97,7 @@ class checkout extends user
         $productmodel = new product_model();
 
         foreach ($cartlist as $k => $v) {
-            $total_amount = $v['qty'] * $v['price'];
+            $total_amount += $v['qty'] * $v['price'];
 
             $productdata =  $productmodel->where([
                 'product_id' => $v['product_id'],
@@ -121,11 +121,12 @@ class checkout extends user
             ]);
         }
 
-       $sod_model->update($so_id,[
+       $salesorder->update($so_id,[
             'total_amount'=>$total_amount,   
             'modified_date' => date('Y-m-d H:i:s')
   
         ]);
+
 
         return redirect()->to('/checkout_complete?order_Serial='.$serial)->withCookies();
     }
