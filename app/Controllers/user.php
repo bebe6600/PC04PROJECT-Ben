@@ -31,6 +31,8 @@ class user extends BaseController
 
         if(empty($token)) {
             $this->data['is_login'] = false;
+            $this->data['token'] = "";
+            
         } else {
             $this->data['is_login'] = true;
             $this->data['name'] = $name;

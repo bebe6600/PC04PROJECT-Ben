@@ -62,10 +62,18 @@
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?= base_url('about') ?>">About</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?= base_url('productList') ?>">Product</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?= base_url('contact') ?>">Contact</a></li>
-                    <li class="nav-item "><a class="btn btn-success" href="<?= base_url('cart') ?>"><i class="bi bi-cart "></i></a></li>
+                    <?php
+                   if($is_login){
+                    ?>
+                   <li class="nav-item "><a class="btn btn-success" href="<?= base_url('cart') ?>"><i class="bi bi-cart "></i></a></li>';
+                   <?php
+                   }
+                   else{
+
+                   }
 
                     
-                    
+                    ?>
 
                 </ul>
             </div>

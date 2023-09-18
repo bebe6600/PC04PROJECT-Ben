@@ -41,7 +41,9 @@ class product extends user
         ])->first();
 
         if (empty($userdata)) {
-            throw new \Exception("invalid token");
+          
+           return redirect()->to("/");
+
         }
 
         $cart_model = new cart_model();
