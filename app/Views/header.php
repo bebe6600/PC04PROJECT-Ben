@@ -65,7 +65,7 @@
                     <?php
                    if($is_login){
                     ?>
-                   <li class="nav-item "><a class="btn btn-success" href="<?= base_url('cart') ?>"><i class="bi bi-cart "></i></a></li>';
+                   <li class="nav-item "><a class="btn btn-success" href="<?= base_url('cart') ?>"><i class="bi bi-cart "></i></a></li>
                    <?php
                    }
                    else{
