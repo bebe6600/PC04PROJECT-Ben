@@ -32,6 +32,9 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/about', 'Home::about');
 $routes->get('/contact', 'Home::contact');
+$routes->post('/contact_submit', 'Home::contact_submit');
+$routes->get('/contact_thanks', 'Home::contact_thanks');
+
 $routes->get('/productList', 'product::productList');
 $routes->get('/product/(:num)', 'product::product/$1');
 $routes->get('/cart','product::cart');

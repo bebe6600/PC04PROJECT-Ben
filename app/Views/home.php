@@ -36,8 +36,8 @@
  </header>  -->
  <br/>
 <div style="text-align:center;">
-<h1 >Sauce Empire</h1>
-<h5>Sauce Empire Manufacturing Sdn Bhd is a Malaysia base company. Supplying majority to food service sectors and introducing Asian Taste to all over the world.</h5>
+<h1 >Sauce King</h1>
+<h5>Sauce King Manufacturing Sdn Bhd is a Malaysia base company. Supplying majority to food service sectors and introducing Asian Taste to all over the world.</h5>
 </div>
 
 <br/>
@@ -57,8 +57,8 @@
         <br />
 
         <h5>Our Company
-            Sauce Empire Manufacturing Sdn Bhd was established since year 2000
-            Sauce Empire Manufacturing Sdn Bhd is a Malaysia base company. The Company was established since year 2000 as a family oriented business and slowly evolved into an organisation with corporate management. Supplying majority to food service sectors and introducing Asian Taste to all over the world. Nyolike’s product, the Company flagship brand is celebrated by major hotels, restaurants, middle and upper class cafes, and evenhawkers stalls in Malaysia due to its versatility.</h5>
+            Sauce King Manufacturing Sdn Bhd was established since year 2000
+            Sauce King Manufacturing Sdn Bhd is a Malaysia base company. The Company was established since year 2000 as a family oriented business and slowly evolved into an organisation with corporate management. Supplying majority to food service sectors and introducing Asian Taste to all over the world. Nyolike’s product, the Company flagship brand is celebrated by major hotels, restaurants, middle and upper class cafes, and evenhawkers stalls in Malaysia due to its versatility.</h5>
     </div>
 </div>
 <br />

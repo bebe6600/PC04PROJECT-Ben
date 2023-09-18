@@ -23,8 +23,8 @@
 
 
                       <p style="color:white;">Our Company
-                          Sauce Empire Manufacturing Sdn Bhd was established since year 2000
-                          Sauce Empire Manufacturing Sdn Bhd is a Malaysia base company. The Company was established since year 2000 as a family oriented business and slowly evolved into an organisation with corporate management. Supplying majority to food service sectors and introducing Asian Taste to all over the world. Nyolike’s product, the Company flagship brand is celebrated by major hotels, restaurants, middle and upper class cafes, and evenhawkers stalls in Malaysia due to its versatility.</p>
+                      Sauce King Manufacturing Sdn Bhd was established since year 2000
+                      Sauce King Manufacturing Sdn Bhd is a Malaysia base company. The Company was established since year 2000 as a family oriented business and slowly evolved into an organisation with corporate management. Supplying majority to food service sectors and introducing Asian Taste to all over the world. Nyolike’s product, the Company flagship brand is celebrated by major hotels, restaurants, middle and upper class cafes, and evenhawkers stalls in Malaysia due to its versatility.</p>
                   </div>
 
                   <div class="col-md-4">
@@ -33,15 +33,15 @@
                       <br />
 
 
-                      <p style="color:white;">Sauce Empire Manufacturing Sdn Bhd.
+                      <p style="color:white;">Sauce King Manufacturing Sdn Bhd.
                           No 666, Jalan 666, ,
                           Taman Bukit industri,
                           56100, Cheras, Kuala Lumpur,
                           Malaysia.<br /><br />
 
-                          Tel: +6017-664-6809/ +603 – 4287 8583
-                          Fax: +603 – 42921000<br />
-                          Email: nyolike.info@gmail.com</p>
+                          Tel: +6017-800-8888/ +603 – 1000 8888
+                          Fax: +603 – 10008888<br />
+                          Email: sauseking888.info@gmail.com</p>
                   </div>
               </div>
               <div class="col-md-10 col-lg-8 col-xl-7">
