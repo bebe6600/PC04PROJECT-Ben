@@ -37,11 +37,10 @@ $routes->get('/contact_thanks', 'Home::contact_thanks');
 
 $routes->get('/productList', 'product::productList');
 $routes->get('/product/(:num)', 'product::product/$1');
+
+
 $routes->get('/cart','product::cart');
-
-
 $routes->get('/checkout_address', 'checkout::checkout_address');
-
 $routes->post('/checkout_submit', 'checkout::checkout_submit');
 
 // $routes->get('/checkout_shipping', 'Frontend::checkout_shipping');
