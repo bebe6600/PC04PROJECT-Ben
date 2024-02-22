@@ -8,14 +8,15 @@ use App\Models\cart_model;
 
 class Api extends BaseController
 {
-    public function addCart(){
+    public function addCart()
+    {
 
         try {
 
             $token = $_POST['token'];
             $product_id = $_POST['product_id'];
             $qty = $_POST['qty'];
-            
+
             $user_model = new user_model();
 
             $userdata = $user_model->where([
@@ -23,7 +24,7 @@ class Api extends BaseController
                 'is_deleted' => 0,
             ])->first();
 
-            if(empty($userdata)) {
+            if (empty($userdata)) {
                 throw new \Exception("invalid token");
             }
 
@@ -33,7 +34,7 @@ class Api extends BaseController
                 'product_id' => $product_id,
                 'is_deleted' => 0,
             ])->first();
-            if(empty($productData)) {
+            if (empty($productData)) {
                 throw new \Exception("invalid product id");
             }
 
@@ -47,18 +48,15 @@ class Api extends BaseController
             ]);
 
             echo "OK";
+        } catch (\Exception $e) {
 
-        } catch (\Exception $e){
-
-            echo "ERROR : ".$e->getMessage();
-
+            echo "ERROR : " . $e->getMessage();
         }
-
-
     }
 
 
-    public function getCart($token){
+    public function getCart($token)
+    {
 
         try {
 
@@ -68,7 +66,7 @@ class Api extends BaseController
                 'is_deleted' => 0,
             ])->first();
 
-            if(empty($userdata)) {
+            if (empty($userdata)) {
                 throw new \Exception("invalid token");
             }
 
@@ -80,7 +78,7 @@ class Api extends BaseController
 
             $product_model = new Product_model();
 
-            foreach($cartList as $k=>$v) {
+            foreach ($cartList as $k => $v) {
 
                 $productData = $product_model->where([
                     'product_id' => $v['product_id']
@@ -88,19 +86,14 @@ class Api extends BaseController
 
                 $cartList[$k]['title'] = $productData['title'];
                 $cartList[$k]['image_url'] = $productData['image_url'];
-
             }
 
 
             //PHP ARRAY => JSON ARRAY
             echo json_encode($cartList);
+        } catch (\Exception $e) {
 
-        } catch (\Exception $e){
-
-            echo "ERROR : ".$e->getMessage();
-
+            echo "ERROR : " . $e->getMessage();
         }
-
     }
-
 }

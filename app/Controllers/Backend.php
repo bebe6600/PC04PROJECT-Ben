@@ -56,7 +56,7 @@ class Backend extends BaseController
     {
 
         $productmodel = new product_model();
-        $productlist = $productmodel->where(["is_deleted" => 0])->findAll();
+        $productlist = $productmodel->where(["is_deleted" => 0])->orderBy('created_date','DESC')->findAll();
         $this->data["productList"] = $productlist;
 
         return view("admin/productlist", $this->data);
@@ -103,7 +103,8 @@ class Backend extends BaseController
 
 
                 //$data = ['uploaded_fileinfo' => new File($filepath)];
-                $image_url = $filepath;
+                $newimage = base_url('uploads/'.$filename);
+                $image_url = $newimage;
             }
         }
 
@@ -184,7 +185,8 @@ class Backend extends BaseController
                 $filepath = './uploads/' . $filename;
                 $img->move('./uploads');
                 //$data = ['uploaded_fileinfo' => new File($filepath)];
-                $image_url = $filepath;
+                $newimage = base_url('uploads/'.$filename);
+                $image_url = $newimage;
             }
         }
 
@@ -225,7 +227,7 @@ class Backend extends BaseController
 
     public function user_manage(){
         $usermodel = new user_model();
-        $userlist = $usermodel->where(["is_deleted" => 0])->findAll();
+        $userlist = $usermodel->where(["is_deleted" => 0])->orderBy('created_date','DESC')->findAll();
         $this->data["userlist"] = $userlist;
 
         return view("admin/userlist", $this->data);
@@ -320,7 +322,7 @@ class Backend extends BaseController
 
     public function so_manage(){
         $so_model = new salesorder_model();
-        $solist = $so_model->where(["is_deleted" => 0])->findAll();
+        $solist = $so_model->where(["is_deleted" => 0])->orderBy('created_date','DESC')->findAll();
         $this->data["solist"] = $solist;
 
         return view("admin/so_list", $this->data);
